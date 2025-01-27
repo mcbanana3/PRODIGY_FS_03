@@ -11,11 +11,14 @@ const ManageProducts = () => {
     const fetchProducts = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/api/products", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await axios.get(
+          "https://prodigy-fs-03-htv9.onrender.com/api/products",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         setProducts(response.data);
       } catch (err) {
         setError("Failed to fetch products");
@@ -32,11 +35,14 @@ const ManageProducts = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/products/${productId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      await axios.delete(
+        `https://prodigy-fs-03-htv9.onrender.com/api/products/${productId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       setSuccess("Product deleted successfully");
       setProducts(products.filter((product) => product._id !== productId));
     } catch (err) {

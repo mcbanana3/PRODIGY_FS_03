@@ -19,11 +19,14 @@ const AdminSettings = () => {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem("token");
-        const { data } = await axios.get("http://localhost:5000/api/profile/", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const { data } = await axios.get(
+          "https://prodigy-fs-03-htv9.onrender.com/api/profile/",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         setProfile(data);
         setLoading(false);
       } catch (error) {
@@ -47,7 +50,7 @@ const AdminSettings = () => {
     try {
       const token = localStorage.getItem("token");
       const { data } = await axios.put(
-        "http://localhost:5000/api/profile/",
+        "https://prodigy-fs-03-htv9.onrender.com/api/profile/",
         profile,
         {
           headers: {

@@ -12,7 +12,7 @@ const CategoryPage = ({ addToCart }) => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/category/${category}`
+          `https://prodigy-fs-03-htv9.onrender.com/api/products/category/${category}`
         );
         setProducts(response.data);
       } catch (err) {

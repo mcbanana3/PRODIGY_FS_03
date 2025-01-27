@@ -6,7 +6,7 @@ const NewsLetter = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:5000/api/subscribe", {
+    fetch("https://prodigy-fs-03-htv9.onrender.com/api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

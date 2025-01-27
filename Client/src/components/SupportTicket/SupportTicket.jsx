@@ -19,7 +19,7 @@ const SupportTicket = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/support",
+        "https://prodigy-fs-03-htv9.onrender.com/api/support",
         {
           subject,
           message,

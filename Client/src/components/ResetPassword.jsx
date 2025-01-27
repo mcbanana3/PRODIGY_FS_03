@@ -13,7 +13,7 @@ const ResetPassword = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/auth/reset-password/${token}`,
+        `https://prodigy-fs-03-htv9.onrender.com/api/auth/reset-password/${token}`,
         { newPassword }
       );
       setMessage(response.data.message);

@@ -17,7 +17,7 @@ const CheckTicketStatus = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/support/${ticketId}`,
+        `https://prodigy-fs-03-htv9.onrender.com/api/support/${ticketId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

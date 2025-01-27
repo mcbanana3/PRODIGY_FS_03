@@ -13,7 +13,7 @@ const SearchResultsPage = ({ addToCart }) => {
     const fetchSearchResults = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/search?query=${query}`
+          `https://prodigy-fs-03-htv9.onrender.com/api/products/search?query=${query}`
         );
         setProducts(response.data);
       } catch (error) {

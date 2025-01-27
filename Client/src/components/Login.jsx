@@ -19,7 +19,7 @@ const Login = ({ setUser }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://prodigy-fs-03-htv9.onrender.com/api/auth/login",
         formData
       );
       const { token } = response.data;
@@ -28,7 +28,7 @@ const Login = ({ setUser }) => {
       localStorage.setItem("token", token);
 
       const userResponse = await axios.get(
-        "http://localhost:5000/api/auth/me",
+        "https://prodigy-fs-03-htv9.onrender.com/api/auth/me",
         {
           headers: {
             Authorization: `Bearer ${token}`,

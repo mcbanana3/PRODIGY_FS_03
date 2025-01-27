@@ -25,7 +25,7 @@ const UploadProduct = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/products",
+        "https://prodigy-fs-03-htv9.onrender.com/api/products",
         formData,
         {
           headers: {

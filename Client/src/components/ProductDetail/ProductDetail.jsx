@@ -15,7 +15,7 @@ const ProductDetail = ({ addToCart }) => {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/products/${id}`
+          `https://prodigy-fs-03-htv9.onrender.com/api/products/${id}`
         );
         setProduct(response.data);
         setReviews(response.data.reviews);
@@ -40,7 +40,7 @@ const ProductDetail = ({ addToCart }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/products/${id}/review`,
+        `https://prodigy-fs-03-htv9.onrender.com/api/products/${id}/review`,
         review,
         {
           headers: {

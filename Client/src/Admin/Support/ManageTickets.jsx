@@ -16,7 +16,7 @@ const ManageTickets = () => {
         }
 
         const response = await axios.get(
-          "http://localhost:5000/api/support/all",
+          "https://prodigy-fs-03-htv9.onrender.com/api/support/all",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -42,7 +42,7 @@ const ManageTickets = () => {
       }
 
       await axios.put(
-        `http://localhost:5000/api/support/${id}/status`,
+        `https://prodigy-fs-03-htv9.onrender.com/api/support/${id}/status`,
         { status },
         {
           headers: {
