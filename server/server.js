@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 // CORS Configuration
 const allowedOrigins = [
-  'http://localhost:5173', // Add your frontend URL here
+  'https://prodigy-fs-03.vercel.app/', // Add your frontend URL here
 ];
 
 app.use(cors({
