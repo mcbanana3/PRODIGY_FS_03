@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 
 // CORS Configuration
 const allowedOrigins = [
-  'https://prodigy-fs-03.vercel.app/', // Add your frontend URL here
+  'https://prodigy-fs-03.vercel.app', // Add your frontend URL here without the trailing slash
 ];
 
 app.use(cors({
